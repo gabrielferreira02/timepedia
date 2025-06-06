@@ -35,3 +35,18 @@ A api possui apenas um endpoint que tem um query parametro obrigatório "team", 
 ```bash
     docker run -e GOOGLE_API_KEY=sua_api_key -p 8080:8080 timepedia
 ```
+
+5 - Agora faça uma requisição para o seguinte endpoint
+```
+    http://localhost:8080/api/summary?team=vasco%20da%20gama
+```
+
+Se o time for reconhecido pela api do gemini a resposta será como o exemplo a seguir:
+```json
+{"response":"O Club de Regatas Vasco da Gama, fundado em 1898..."}
+```
+
+Caso contrário essa será a resposta:
+```json
+{"response":"Desculpe, não conheço o time\n"}
+```
