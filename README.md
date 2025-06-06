@@ -14,18 +14,18 @@ A api possui apenas um endpoint que tem um query parametro obrigatório "team", 
 
 1 - Clone o repositório e navegue até o diretório gerado
 ```bash
-    git clone http://github.com/gabrielferrreira02/timepedia.git
-    cd timepedia
+git clone http://github.com/gabrielferrreira02/timepedia.git
+cd timepedia
 ```
 
 2 - Gere o arquivo jar
 ```bash
-    mvn clean install
+mvn clean install
 ```
 
 3 - Faça o build do Dockerfile
 ```bash
-    docker build -t timepedia .
+docker build -t timepedia .
 ```
 
 >[!NOTE]
@@ -33,12 +33,12 @@ A api possui apenas um endpoint que tem um query parametro obrigatório "team", 
 
 4 - Inicie o container
 ```bash
-    docker run -e GOOGLE_API_KEY=sua_api_key -p 8080:8080 timepedia
+docker run -e GOOGLE_API_KEY=sua_api_key -p 8080:8080 timepedia
 ```
 
 5 - Agora faça uma requisição para o seguinte endpoint
 ```
-    http://localhost:8080/api/summary?team=vasco%20da%20gama
+http://localhost:8080/api/summary?team=vasco%20da%20gama
 ```
 
 Se o time for reconhecido pela api do gemini a resposta será como o exemplo a seguir:
